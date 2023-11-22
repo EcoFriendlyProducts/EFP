@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+	<title> Shop </title>
+	<style>
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		.container-fluid{
+			border-top: 8px lightgreen solid;			
+			border-bottom: 5px lightgreen solid;
+		}
+		.col{
+			font-family: Arial;
+			font-size: 18px;
+			color: mediumseagreen;
+			margin-top: 34px;
+			text-align: center;
+			text-decoration: none;
+		}
+	</style>
+</head>
+<body>
+	<div class="container-fluid">
+			<div class="row">
+				<div class="col-lg-2 col-sm-3 col-5"> <img src="http://localhost/efpdb/EFP/img1.jpg" class="img-fluid"> </div>
+				<a href="http://localhost/efpdb/EFP/EFP.html" class="col"> Home </a>
+				<a href="http://localhost/efpdb/shop/shop.html" class="col"> Shop </a>
+				<a href="http://localhost/efpdb/Books/Books.html" class="col"> Books </a>
+				<a href="http://localhost/efpdb/signin/sign.html" class="col"> Sign In </a>
+				<a href="http://localhost/efpdb/login/login.html" class="col"> Login </a>
+			</div>
+	</div>
+
+	<div class="container-fluid">
+		<div class="row d-none d-sm-block">
+			<input type="search" name="search" list="sproduct" placeholder="Search Products Here" class="col-lg-6 col-md-6 col-sm-6" style="border: 2px black solid; margin: 1% 1% 1% 20%;">
+					<datalist id="sproduct">
+						<option value="Tooth Brush"> Tooth Brush </option>
+						<option value="Hand Bags"> Hand Bags </option>
+					</datalist>
+			<button class="col-lg-1 col-md-2 col-sm-2" style="height: 28px; margin-top: 1%;" onclick="check()"> Search </button>
+			<div class="container">
+				<div class="row">
+					<div class="col-xxl-1 col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1 mx-xxl-5 mx-xl-5 mx-lg-4 mx-md-4 mx-sm-4 my-5">
+						<div class="categories">
+							<a href="#product1">
+							<img src="http://localhost/efpdb/EFP/BAMBOO%20TOOTHBRUSH.jpg" class="img-fluid" style="border-radius: 50%;">
+							</a>
+							<h6 style="color: yellowgreen; text-align: center;"> Product 1 </h6>
+						</div>
+					</div>
+					<div class="col-xxl-1 col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1 mx-xxl-5 mx-xl-5 mx-lg-4 mx-md-4 mx-sm-4 my-5">
+						<div class="categories">
+							<a href="#product2">
+							<img src="http://localhost/efpdb/EFP/BAMBOO%20TOOTHBRUSH.jpg" class="img-fluid" style="border-radius: 50%;">
+							</a>
+							<h6 style="color: yellowgreen; text-align: center;"> Product 2 </h6>
+						</div>
+					</div>
+					<div class="col-xxl-1 col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1 mx-xxl-5 mx-xl-5 mx-lg-4 mx-md-4 mx-sm-4 my-5">
+						<div class="categories">
+							<a href="#product3">
+							<img src="http://localhost/efpdb/EFP/BAMBOO%20TOOTHBRUSH.jpg" class="img-fluid" style="border-radius: 50%;">
+							</a>
+							<h6 style="color: yellowgreen; text-align: center;"> Product 3 </h6>
+						</div>
+					</div>
+					<div class="col-xxl-1 col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1 mx-xxl-5 mx-xl-5 mx-lg-4 mx-md-4 mx-sm-4 my-5">
+						<div class="categories">
+							<a href="#product4">
+							<img src="http://localhost/efpdb/EFP/BAMBOO%20TOOTHBRUSH.jpg" class="img-fluid" style="border-radius: 50%;">
+							</a>
+							<h6 style="color: yellowgreen; text-align: center;"> Product 4 </h6>
+						</div>
+					</div>
+					<div class="col-xxl-1 col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1 mx-xxl-5 mx-xl-5 mx-lg-4 mx-md-4 mx-sm-4 my-5">
+						<div class="categories">
+							<a href="#product5">
+							<img src="http://localhost/efpdb/EFP/BAMBOO%20TOOTHBRUSH.jpg" class="img-fluid" style="border-radius: 50%;">
+							</a>
+							<h6 style="color: yellowgreen; text-align: center;"> Product 5 </h6>
+						</div>
+					</div>
+					<div class="col-xxl-1 col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1 mx-xxl-5 mx-xl-5 mx-lg-4 mx-md-4 mx-sm-4 my-5">
+						<div class="categories">
+							<a href="#product6">
+							<img src="http://localhost/efpdb/EFP/BAMBOO%20TOOTHBRUSH.jpg" class="img-fluid" style="border-radius: 50%;">
+							</a>
+							<h6 style="color: yellowgreen; text-align: center;"> Product 6 </h6>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container-fluid">
+		<div class="container">
+			<div class="row">
+				<p id="product1" class="col-lg-12 text-center fs-2 fw-bold fst-italic pb-4" style="color: forestgreen; text-decoration: underline;"> Products 1</p>
+					<div class="col-lg-2 mx-lg-3 col-md-4 mx-md-5 col-sm-5 mx-sm-3 col-5 mx-2 my-5">
+						<div class="card">
+							<img src="http://localhost/efpdb/shop/Coffee%20Mug%20(350ml).jpg" class="card-img-top"/>
+							<div class="card-body">
+								<h6 class="card-title"> Coffee Mug (350 ML) <h6>
+								<p class="card-Price mb-2"> M.R.P <del><span>&#8377;</span>599</del> <br/> <span>&#8377;</span>385 </p>
+								<a href="https://amzn.eu/d/5E2pwn6" target="_blank" class="btn btn-primary"> Buy Now </a>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-2 mx-lg-3 col-md-4 mx-md-5 col-sm-5 mx-sm-3 col-5 mx-2 my-5">
+						<div class="card">
+							<img src="file:///C:/Users/hp/Desktop/Web%20Devlopment/Website/5.jpg" class="card-img-top"/>
+							<div class="card-body">
+								<h6 class="card-title"> Biodegradble Mug <h6>
+								<p class="card-Price mb-2"> <span>&#8377;</span> 99 </p>
+								<a href="" class="btn btn-primary"> Buy Now </a>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-2 mx-lg-3 col-md-4 mx-md-5 col-sm-5 mx-sm-3 col-5 mx-2 my-5">
+						<div class="card">
+							<img src="file:///C:/Users/hp/Desktop/Web%20Devlopment/Website/5.jpg" class="card-img-top"/>
+							<div class="card-body">
+								<h6 class="card-title"> Biodegradble Mug <h6>
+								<p class="card-Price mb-2"> <span>&#8377;</span> 99 </p>
+								<a href="" class="btn btn-primary"> Buy Now </a>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-2 mx-lg-3 col-md-4 mx-md-5 col-sm-5 mx-sm-3 col-5 mx-2 my-5">
+						<div class="card">
+							<img src="file:///C:/Users/hp/Desktop/Web%20Devlopment/Website/5.jpg" class="card-img-top"/>
+							<div class="card-body">
+								<h6 class="card-title"> Biodegradble Mug <h6>
+								<p class="card-Price mb-2"> <span>&#8377;</span> 99 </p>
+								<a href="" class="btn btn-primary"> Buy Now </a>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-2 mx-lg-3 col-md-4 mx-md-5 col-sm-5 mx-sm-3 col-5 mx-2 my-5">
+						<div class="card">
+							<img src="file:///C:/Users/hp/Desktop/Web%20Devlopment/Website/5.jpg" class="card-img-top"/>
+							<div class="card-body">
+								<h6 class="card-title"> Biodegradble Mug <h6>
+								<p class="card-Price mb-2"> <span>&#8377;</span> 99 </p>
+								<a href="" class="btn btn-primary"> Buy Now </a>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-2 mx-lg-3 col-md-4 mx-md-5 col-sm-5 mx-sm-3 col-5 mx-2 my-5">
+						<div class="card">
+							<img src="file:///C:/Users/hp/Desktop/Web%20Devlopment/Website/5.jpg" class="card-img-top"/>
+							<div class="card-body">
+								<h6 class="card-title"> Biodegradble Mug <h6>
+								<p class="card-Price mb-2"> <span>&#8377;</span> 99 </p>
+								<a href="" class="btn btn-primary"> Buy Now </a>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-2 mx-lg-3 col-md-4 mx-md-5 col-sm-5 mx-sm-3 col-5 mx-2 my-5">
+						<div class="card">
+							<img src="file:///C:/Users/hp/Desktop/Web%20Devlopment/Website/5.jpg" class="card-img-top"/>
+							<div class="card-body">
+								<h6 class="card-title"> Biodegradble Mug <h6>
+								<p class="card-Price mb-2"> <span>&#8377;</span> 99 </p>
+								<a href="" class="btn btn-primary"> Buy Now </a>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-2 mx-lg-3 col-md-4 mx-md-5 col-sm-5 mx-sm-3 col-5 mx-2 my-5">
+						<div class="card">
+							<img src="file:///C:/Users/hp/Desktop/Web%20Devlopment/Website/5.jpg" class="card-img-top"/>
+							<div class="card-body">
+								<h6 class="card-title"> Biodegradble Mug <h6>
+								<p class="card-Price mb-2"> <span>&#8377;</span> 99 </p>
+								<a href="" class="btn btn-primary"> Buy Now </a>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-2 mx-lg-3 col-md-4 mx-md-5 col-sm-5 mx-sm-3 col-5 mx-2 my-5">
+						<div class="card">
+							<img src="file:///C:/Users/hp/Desktop/Web%20Devlopment/Website/5.jpg" class="card-img-top"/>
+							<div class="card-body">
+								<h6 class="card-title"> Biodegradble Mug <h6>
+								<p class="card-Price mb-2"> <span>&#8377;</span> 99 </p>
+								<a href="" class="btn btn-primary"> Buy Now </a>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-2 mx-lg-3 col-md-4 mx-md-5 col-sm-5 mx-sm-3 col-5 mx-2 my-5">
+						<div class="card">
+							<img src="file:///C:/Users/hp/Desktop/Web%20Devlopment/Website/5.jpg" class="card-img-top"/>
+							<div class="card-body">
+								<h6 class="card-title"> Biodegradble Mug <h6>
+								<p class="card-Price mb-2"> <span>&#8377;</span> 99 </p>
+								<a href="" class="btn btn-primary"> Buy Now </a>
+							</div>
+						</div>
+					</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container-fluid">
+		<div class="container">
+			<div class="row">
+				<p id="product2" class="col-lg-12 text-center fs-2 fw-bold fst-italic pb-4" style="color: forestgreen; text-decoration: underline;"> Products 2</p>
+					<div class="col-lg-2 mx-lg-3 col-md-4 mx-md-5 col-sm-5 mx-sm-3 col-5 mx-2 my-5">
+						<div class="card">
+							<img src="file:///C:/Users/hp/Desktop/Web%20Devlopment/Website/5.jpg" class="card-img-top"/>
+							<div class="card-body">
+								<h6 class="card-title"> Biodegradble Mug <h6>
+								<p class="card-Price mb-2"> <span>&#8377;</span> 99 </p>
+								<a href="" class="btn btn-primary"> Buy Now </a>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-2 mx-lg-3 col-md-4 mx-md-5 col-sm-5 mx-sm-3 col-5 mx-2 my-5">
+						<div class="card">
+							<img src="file:///C:/Users/hp/Desktop/Web%20Devlopment/Website/5.jpg" class="card-img-top"/>
+							<div class="card-body">
+								<h6 class="card-title"> Biodegradble Mug <h6>
+								<p class="card-Price mb-2"> <span>&#8377;</span> 99 </p>
+								<a href="" class="btn btn-primary"> Buy Now </a>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-2 mx-lg-3 col-md-4 mx-md-5 col-sm-5 mx-sm-3 col-5 mx-2 my-5">
+						<div class="card">
+							<img src="file:///C:/Users/hp/Desktop/Web%20Devlopment/Website/5.jpg" class="card-img-top"/>
+							<div class="card-body">
+								<h6 class="card-title"> Biodegradble Mug <h6>
+								<p class="card-Price mb-2"> <span>&#8377;</span> 99 </p>
+								<a href="" class="btn btn-primary"> Buy Now </a>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-2 mx-lg-3 col-md-4 mx-md-5 col-sm-5 mx-sm-3 col-5 mx-2 my-5">
+						<div class="card">
+							<img src="file:///C:/Users/hp/Desktop/Web%20Devlopment/Website/5.jpg" class="card-img-top"/>
+							<div class="card-body">
+								<h6 class="card-title"> Biodegradble Mug <h6>
+								<p class="card-Price mb-2"> <span>&#8377;</span> 99 </p>
+								<a href="" class="btn btn-primary"> Buy Now </a>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-2 mx-lg-3 col-md-4 mx-md-5 col-sm-5 mx-sm-3 col-5 mx-2 my-5">
+						<div class="card">
+							<img src="file:///C:/Users/hp/Desktop/Web%20Devlopment/Website/5.jpg" class="card-img-top"/>
+							<div class="card-body">
+								<h6 class="card-title"> Biodegradble Mug <h6>
+								<p class="card-Price mb-2"> <span>&#8377;</span> 99 </p>
+								<a href="" class="btn btn-primary"> Buy Now </a>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-2 mx-lg-3 col-md-4 mx-md-5 col-sm-5 mx-sm-3 col-5 mx-2 my-5">
+						<div class="card">
+							<img src="file:///C:/Users/hp/Desktop/Web%20Devlopment/Website/5.jpg" class="card-img-top"/>
+							<div class="card-body">
+								<h6 class="card-title"> Biodegradble Mug <h6>
+								<p class="card-Price mb-2"> <span>&#8377;</span> 99 </p>
+								<a href="" class="btn btn-primary"> Buy Now </a>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-2 mx-lg-3 col-md-4 mx-md-5 col-sm-5 mx-sm-3 col-5 mx-2 my-5">
+						<div class="card">
+							<img src="file:///C:/Users/hp/Desktop/Web%20Devlopment/Website/5.jpg" class="card-img-top"/>
+							<div class="card-body">
+								<h6 class="card-title"> Biodegradble Mug <h6>
+								<p class="card-Price mb-2"> <span>&#8377;</span> 99 </p>
+								<a href="" class="btn btn-primary"> Buy Now </a>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-2 mx-lg-3 col-md-4 mx-md-5 col-sm-5 mx-sm-3 col-5 mx-2 my-5">
+						<div class="card">
+							<img src="file:///C:/Users/hp/Desktop/Web%20Devlopment/Website/5.jpg" class="card-img-top"/>
+							<div class="card-body">
+								<h6 class="card-title"> Biodegradble Mug <h6>
+								<p class="card-Price mb-2"> <span>&#8377;</span> 99 </p>
+								<a href="" class="btn btn-primary"> Buy Now </a>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-2 mx-lg-3 col-md-4 mx-md-5 col-sm-5 mx-sm-3 col-5 mx-2 my-5">
+						<div class="card">
+							<img src="file:///C:/Users/hp/Desktop/Web%20Devlopment/Website/5.jpg" class="card-img-top"/>
+							<div class="card-body">
+								<h6 class="card-title"> Biodegradble Mug <h6>
+								<p class="card-Price mb-2"> <span>&#8377;</span> 99 </p>
+								<a href="" class="btn btn-primary"> Buy Now </a>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-2 mx-lg-3 col-md-4 mx-md-5 col-sm-5 mx-sm-3 col-5 mx-2 my-5">
+						<div class="card">
+							<img src="file:///C:/Users/hp/Desktop/Web%20Devlopment/Website/5.jpg" class="card-img-top"/>
+							<div class="card-body">
+								<h6 class="card-title"> Biodegradble Mug <h6>
+								<p class="card-Price mb-2"> <span>&#8377;</span> 99 </p>
+								<a href="" class="btn btn-primary"> Buy Now </a>
+							</div>
+						</div>
+					</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container-fluid">
+		<div class="container">
+			<div class="row">
+				<p id="product3" class="col-lg-12 text-center fs-2 fw-bold fst-italic pb-4" style="color: forestgreen; text-decoration: underline;"> Products 3</p>
+					<div class="col-lg-2 mx-lg-3 col-md-4 mx-md-5 col-sm-5 mx-sm-3 col-5 mx-2 my-5">
+						<div class="card">
+							<img src="file:///C:/Users/hp/Desktop/Web%20Devlopment/Website/5.jpg" class="card-img-top"/>
+							<div class="card-body">
+								<h6 class="card-title"> Biodegradble Mug <h6>
+								<p class="card-Price mb-2"> <span>&#8377;</span> 99 </p>
+								<a href="" class="btn btn-primary"> Buy Now </a>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-2 mx-lg-3 col-md-4 mx-md-5 col-sm-5 mx-sm-3 col-5 mx-2 my-5">
+						<div class="card">
+							<img src="file:///C:/Users/hp/Desktop/Web%20Devlopment/Website/5.jpg" class="card-img-top"/>
+							<div class="card-body">
+								<h6 class="card-title"> Biodegradble Mug <h6>
+								<p class="card-Price mb-2"> <span>&#8377;</span> 99 </p>
+								<a href="" class="btn btn-primary"> Buy Now </a>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-2 mx-lg-3 col-md-4 mx-md-5 col-sm-5 mx-sm-3 col-5 mx-2 my-5">
+						<div class="card">
+							<img src="file:///C:/Users/hp/Desktop/Web%20Devlopment/Website/5.jpg" class="card-img-top"/>
+							<div class="card-body">
+								<h6 class="card-title"> Biodegradble Mug <h6>
+								<p class="card-Price mb-2"> <span>&#8377;</span> 99 </p>
+								<a href="" class="btn btn-primary"> Buy Now </a>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-2 mx-lg-3 col-md-4 mx-md-5 col-sm-5 mx-sm-3 col-5 mx-2 my-5">
+						<div class="card">
+							<img src="file:///C:/Users/hp/Desktop/Web%20Devlopment/Website/5.jpg" class="card-img-top"/>
+							<div class="card-body">
+								<h6 class="card-title"> Biodegradble Mug <h6>
+								<p class="card-Price mb-2"> <span>&#8377;</span> 99 </p>
+								<a href="" class="btn btn-primary"> Buy Now </a>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-2 mx-lg-3 col-md-4 mx-md-5 col-sm-5 mx-sm-3 col-5 mx-2 my-5">
+						<div class="card">
+							<img src="file:///C:/Users/hp/Desktop/Web%20Devlopment/Website/5.jpg" class="card-img-top"/>
+							<div class="card-body">
+								<h6 class="card-title"> Biodegradble Mug <h6>
+								<p class="card-Price mb-2"> <span>&#8377;</span> 99 </p>
+								<a href="" class="btn btn-primary"> Buy Now </a>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-2 mx-lg-3 col-md-4 mx-md-5 col-sm-5 mx-sm-3 col-5 mx-2 my-5">
+						<div class="card">
+							<img src="file:///C:/Users/hp/Desktop/Web%20Devlopment/Website/5.jpg" class="card-img-top"/>
+							<div class="card-body">
+								<h6 class="card-title"> Biodegradble Mug <h6>
+								<p class="card-Price mb-2"> <span>&#8377;</span> 99 </p>
+								<a href="" class="btn btn-primary"> Buy Now </a>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-2 mx-lg-3 col-md-4 mx-md-5 col-sm-5 mx-sm-3 col-5 mx-2 my-5">
+						<div class="card">
+							<img src="file:///C:/Users/hp/Desktop/Web%20Devlopment/Website/5.jpg" class="card-img-top"/>
+							<div class="card-body">
+								<h6 class="card-title"> Biodegradble Mug <h6>
+								<p class="card-Price mb-2"> <span>&#8377;</span> 99 </p>
+								<a href="" class="btn btn-primary"> Buy Now </a>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-2 mx-lg-3 col-md-4 mx-md-5 col-sm-5 mx-sm-3 col-5 mx-2 my-5">
+						<div class="card">
+							<img src="file:///C:/Users/hp/Desktop/Web%20Devlopment/Website/5.jpg" class="card-img-top"/>
+							<div class="card-body">
+								<h6 class="card-title"> Biodegradble Mug <h6>
+								<p class="card-Price mb-2"> <span>&#8377;</span> 99 </p>
+								<a href="" class="btn btn-primary"> Buy Now </a>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-2 mx-lg-3 col-md-4 mx-md-5 col-sm-5 mx-sm-3 col-5 mx-2 my-5">
+						<div class="card">
+							<img src="file:///C:/Users/hp/Desktop/Web%20Devlopment/Website/5.jpg" class="card-img-top"/>
+							<div class="card-body">
+								<h6 class="card-title"> Biodegradble Mug <h6>
+								<p class="card-Price mb-2"> <span>&#8377;</span> 99 </p>
+								<a href="" class="btn btn-primary"> Buy Now </a>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-2 mx-lg-3 col-md-4 mx-md-5 col-sm-5 mx-sm-3 col-5 mx-2 my-5">
+						<div class="card">
+							<img src="file:///C:/Users/hp/Desktop/Web%20Devlopment/Website/5.jpg" class="card-img-top"/>
+							<div class="card-body">
+								<h6 class="card-title"> Biodegradble Mug <h6>
+								<p class="card-Price mb-2"> <span>&#8377;</span> 99 </p>
+								<a href="" class="btn btn-primary"> Buy Now </a>
+							</div>
+						</div>
+					</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container-fluid">
+		<div class="container">
+			<div class="row">
+				<p id="product4" class="col-lg-12 text-center fs-2 fw-bold fst-italic pb-4" style="color: forestgreen; text-decoration: underline;"> Products 4</p>
+					<div class="col-lg-2 mx-lg-3 col-md-4 mx-md-5 col-sm-5 mx-sm-3 col-5 mx-2 my-5">
+						<div class="card">
+							<img src="file:///C:/Users/hp/Desktop/Web%20Devlopment/Website/5.jpg" class="card-img-top"/>
+							<div class="card-body">
+								<h6 class="card-title"> Biodegradble Mug <h6>
+								<p class="card-Price mb-2"> <span>&#8377;</span> 99 </p>
+								<a href="" class="btn btn-primary"> Buy Now </a>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-2 mx-lg-3 col-md-4 mx-md-5 col-sm-5 mx-sm-3 col-5 mx-2 my-5">
+						<div class="card">
+							<img src="file:///C:/Users/hp/Desktop/Web%20Devlopment/Website/5.jpg" class="card-img-top"/>
+							<div class="card-body">
+								<h6 class="card-title"> Biodegradble Mug <h6>
+								<p class="card-Price mb-2"> <span>&#8377;</span> 99 </p>
+								<a href="" class="btn btn-primary"> Buy Now </a>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-2 mx-lg-3 col-md-4 mx-md-5 col-sm-5 mx-sm-3 col-5 mx-2 my-5">
+						<div class="card">
+							<img src="file:///C:/Users/hp/Desktop/Web%20Devlopment/Website/5.jpg" class="card-img-top"/>
+							<div class="card-body">
+								<h6 class="card-title"> Biodegradble Mug <h6>
+								<p class="card-Price mb-2"> <span>&#8377;</span> 99 </p>
+								<a href="" class="btn btn-primary"> Buy Now </a>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-2 mx-lg-3 col-md-4 mx-md-5 col-sm-5 mx-sm-3 col-5 mx-2 my-5">
+						<div class="card">
+							<img src="file:///C:/Users/hp/Desktop/Web%20Devlopment/Website/5.jpg" class="card-img-top"/>
+							<div class="card-body">
+								<h6 class="card-title"> Biodegradble Mug <h6>
+								<p class="card-Price mb-2"> <span>&#8377;</span> 99 </p>
+								<a href="" class="btn btn-primary"> Buy Now </a>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-2 mx-lg-3 col-md-4 mx-md-5 col-sm-5 mx-sm-3 col-5 mx-2 my-5">
+						<div class="card">
+							<img src="file:///C:/Users/hp/Desktop/Web%20Devlopment/Website/5.jpg" class="card-img-top"/>
+							<div class="card-body">
+								<h6 class="card-title"> Biodegradble Mug <h6>
+								<p class="card-Price mb-2"> <span>&#8377;</span> 99 </p>
+								<a href="" class="btn btn-primary"> Buy Now </a>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-2 mx-lg-3 col-md-4 mx-md-5 col-sm-5 mx-sm-3 col-5 mx-2 my-5">
+						<div class="card">
+							<img src="file:///C:/Users/hp/Desktop/Web%20Devlopment/Website/5.jpg" class="card-img-top"/>
+							<div class="card-body">
+								<h6 class="card-title"> Biodegradble Mug <h6>
+								<p class="card-Price mb-2"> <span>&#8377;</span> 99 </p>
+								<a href="" class="btn btn-primary"> Buy Now </a>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-2 mx-lg-3 col-md-4 mx-md-5 col-sm-5 mx-sm-3 col-5 mx-2 my-5">
+						<div class="card">
+							<img src="file:///C:/Users/hp/Desktop/Web%20Devlopment/Website/5.jpg" class="card-img-top"/>
+							<div class="card-body">
+								<h6 class="card-title"> Biodegradble Mug <h6>
+								<p class="card-Price mb-2"> <span>&#8377;</span> 99 </p>
+								<a href="" class="btn btn-primary"> Buy Now </a>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-2 mx-lg-3 col-md-4 mx-md-5 col-sm-5 mx-sm-3 col-5 mx-2 my-5">
+						<div class="card">
+							<img src="file:///C:/Users/hp/Desktop/Web%20Devlopment/Website/5.jpg" class="card-img-top"/>
+							<div class="card-body">
+								<h6 class="card-title"> Biodegradble Mug <h6>
+								<p class="card-Price mb-2"> <span>&#8377;</span> 99 </p>
+								<a href="" class="btn btn-primary"> Buy Now </a>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-2 mx-lg-3 col-md-4 mx-md-5 col-sm-5 mx-sm-3 col-5 mx-2 my-5">
+						<div class="card">
+							<img src="file:///C:/Users/hp/Desktop/Web%20Devlopment/Website/5.jpg" class="card-img-top"/>
+							<div class="card-body">
+								<h6 class="card-title"> Biodegradble Mug <h6>
+								<p class="card-Price mb-2"> <span>&#8377;</span> 99 </p>
+								<a href="" class="btn btn-primary"> Buy Now </a>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-2 mx-lg-3 col-md-4 mx-md-5 col-sm-5 mx-sm-3 col-5 mx-2 my-5">
+						<div class="card">
+							<img src="file:///C:/Users/hp/Desktop/Web%20Devlopment/Website/5.jpg" class="card-img-top"/>
+							<div class="card-body">
+								<h6 class="card-title"> Biodegradble Mug <h6>
+								<p class="card-Price mb-2"> <span>&#8377;</span> 99 </p>
+								<a href="" class="btn btn-primary"> Buy Now </a>
+							</div>
+						</div>
+					</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container-fluid">
+		<div class="container">
+			<div class="row">
+				<p id="product5" class="col-lg-12 text-center fs-2 fw-bold fst-italic pb-4" style="color: forestgreen; text-decoration: underline;"> Products 5</p>
+					<div class="col-lg-2 mx-lg-3 col-md-4 mx-md-5 col-sm-5 mx-sm-3 col-5 mx-2 my-5">
+						<div class="card">
+							<img src="file:///C:/Users/hp/Desktop/Web%20Devlopment/Website/5.jpg" class="card-img-top"/>
+							<div class="card-body">
+								<h6 class="card-title"> Biodegradble Mug <h6>
+								<p class="card-Price mb-2"> <span>&#8377;</span> 99 </p>
+								<a href="" class="btn btn-primary"> Buy Now </a>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-2 mx-lg-3 col-md-4 mx-md-5 col-sm-5 mx-sm-3 col-5 mx-2 my-5">
+						<div class="card">
+							<img src="file:///C:/Users/hp/Desktop/Web%20Devlopment/Website/5.jpg" class="card-img-top"/>
+							<div class="card-body">
+								<h6 class="card-title"> Biodegradble Mug <h6>
+								<p class="card-Price mb-2"> <span>&#8377;</span> 99 </p>
+								<a href="" class="btn btn-primary"> Buy Now </a>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-2 mx-lg-3 col-md-4 mx-md-5 col-sm-5 mx-sm-3 col-5 mx-2 my-5">
+						<div class="card">
+							<img src="file:///C:/Users/hp/Desktop/Web%20Devlopment/Website/5.jpg" class="card-img-top"/>
+							<div class="card-body">
+								<h6 class="card-title"> Biodegradble Mug <h6>
+								<p class="card-Price mb-2"> <span>&#8377;</span> 99 </p>
+								<a href="" class="btn btn-primary"> Buy Now </a>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-2 mx-lg-3 col-md-4 mx-md-5 col-sm-5 mx-sm-3 col-5 mx-2 my-5">
+						<div class="card">
+							<img src="file:///C:/Users/hp/Desktop/Web%20Devlopment/Website/5.jpg" class="card-img-top"/>
+							<div class="card-body">
+								<h6 class="card-title"> Biodegradble Mug <h6>
+								<p class="card-Price mb-2"> <span>&#8377;</span> 99 </p>
+								<a href="" class="btn btn-primary"> Buy Now </a>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-2 mx-lg-3 col-md-4 mx-md-5 col-sm-5 mx-sm-3 col-5 mx-2 my-5">
+						<div class="card">
+							<img src="file:///C:/Users/hp/Desktop/Web%20Devlopment/Website/5.jpg" class="card-img-top"/>
+							<div class="card-body">
+								<h6 class="card-title"> Biodegradble Mug <h6>
+								<p class="card-Price mb-2"> <span>&#8377;</span> 99 </p>
+								<a href="" class="btn btn-primary"> Buy Now </a>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-2 mx-lg-3 col-md-4 mx-md-5 col-sm-5 mx-sm-3 col-5 mx-2 my-5">
+						<div class="card">
+							<img src="file:///C:/Users/hp/Desktop/Web%20Devlopment/Website/5.jpg" class="card-img-top"/>
+							<div class="card-body">
+								<h6 class="card-title"> Biodegradble Mug <h6>
+								<p class="card-Price mb-2"> <span>&#8377;</span> 99 </p>
+								<a href="" class="btn btn-primary"> Buy Now </a>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-2 mx-lg-3 col-md-4 mx-md-5 col-sm-5 mx-sm-3 col-5 mx-2 my-5">
+						<div class="card">
+							<img src="file:///C:/Users/hp/Desktop/Web%20Devlopment/Website/5.jpg" class="card-img-top"/>
+							<div class="card-body">
+								<h6 class="card-title"> Biodegradble Mug <h6>
+								<p class="card-Price mb-2"> <span>&#8377;</span> 99 </p>
+								<a href="" class="btn btn-primary"> Buy Now </a>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-2 mx-lg-3 col-md-4 mx-md-5 col-sm-5 mx-sm-3 col-5 mx-2 my-5">
+						<div class="card">
+							<img src="file:///C:/Users/hp/Desktop/Web%20Devlopment/Website/5.jpg" class="card-img-top"/>
+							<div class="card-body">
+								<h6 class="card-title"> Biodegradble Mug <h6>
+								<p class="card-Price mb-2"> <span>&#8377;</span> 99 </p>
+								<a href="" class="btn btn-primary"> Buy Now </a>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-2 mx-lg-3 col-md-4 mx-md-5 col-sm-5 mx-sm-3 col-5 mx-2 my-5">
+						<div class="card">
+							<img src="file:///C:/Users/hp/Desktop/Web%20Devlopment/Website/5.jpg" class="card-img-top"/>
+							<div class="card-body">
+								<h6 class="card-title"> Biodegradble Mug <h6>
+								<p class="card-Price mb-2"> <span>&#8377;</span> 99 </p>
+								<a href="" class="btn btn-primary"> Buy Now </a>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-2 mx-lg-3 col-md-4 mx-md-5 col-sm-5 mx-sm-3 col-5 mx-2 my-5">
+						<div class="card">
+							<img src="file:///C:/Users/hp/Desktop/Web%20Devlopment/Website/5.jpg" class="card-img-top"/>
+							<div class="card-body">
+								<h6 class="card-title"> Biodegradble Mug <h6>
+								<p class="card-Price mb-2"> <span>&#8377;</span> 99 </p>
+								<a href="" class="btn btn-primary"> Buy Now </a>
+							</div>
+						</div>
+					</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container-fluid">
+		<div class="container">
+			<div class="row">
+				<p id="product6" class="col-lg-12 text-center fs-2 fw-bold fst-italic pb-4" style="color: forestgreen; text-decoration: underline;"> Products 6 </p>
+					<div class="col-lg-2 mx-lg-3 col-md-4 mx-md-5 col-sm-5 mx-sm-3 col-5 mx-2 my-5">
+						<div class="card">
+							<img src="file:///C:/Users/hp/Desktop/Web%20Devlopment/Website/5.jpg" class="card-img-top"/>
+							<div class="card-body">
+								<h6 class="card-title"> Biodegradble Mug <h6>
+								<p class="card-Price mb-2"> <span>&#8377;</span> 99 </p>
+								<a href="" class="btn btn-primary"> Buy Now </a>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-2 mx-lg-3 col-md-4 mx-md-5 col-sm-5 mx-sm-3 col-5 mx-2 my-5">
+						<div class="card">
+							<img src="file:///C:/Users/hp/Desktop/Web%20Devlopment/Website/5.jpg" class="card-img-top"/>
+							<div class="card-body">
+								<h6 class="card-title"> Biodegradble Mug <h6>
+								<p class="card-Price mb-2"> <span>&#8377;</span> 99 </p>
+								<a href="" class="btn btn-primary"> Buy Now </a>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-2 mx-lg-3 col-md-4 mx-md-5 col-sm-5 mx-sm-3 col-5 mx-2 my-5">
+						<div class="card">
+							<img src="file:///C:/Users/hp/Desktop/Web%20Devlopment/Website/5.jpg" class="card-img-top"/>
+							<div class="card-body">
+								<h6 class="card-title"> Biodegradble Mug <h6>
+								<p class="card-Price mb-2"> <span>&#8377;</span> 99 </p>
+								<a href="" class="btn btn-primary"> Buy Now </a>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-2 mx-lg-3 col-md-4 mx-md-5 col-sm-5 mx-sm-3 col-5 mx-2 my-5">
+						<div class="card">
+							<img src="file:///C:/Users/hp/Desktop/Web%20Devlopment/Website/5.jpg" class="card-img-top"/>
+							<div class="card-body">
+								<h6 class="card-title"> Biodegradble Mug <h6>
+								<p class="card-Price mb-2"> <span>&#8377;</span> 99 </p>
+								<a href="" class="btn btn-primary"> Buy Now </a>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-2 mx-lg-3 col-md-4 mx-md-5 col-sm-5 mx-sm-3 col-5 mx-2 my-5">
+						<div class="card">
+							<img src="file:///C:/Users/hp/Desktop/Web%20Devlopment/Website/5.jpg" class="card-img-top"/>
+							<div class="card-body">
+								<h6 class="card-title"> Biodegradble Mug <h6>
+								<p class="card-Price mb-2"> <span>&#8377;</span> 99 </p>
+								<a href="" class="btn btn-primary"> Buy Now </a>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-2 mx-lg-3 col-md-4 mx-md-5 col-sm-5 mx-sm-3 col-5 mx-2 my-5">
+						<div class="card">
+							<img src="file:///C:/Users/hp/Desktop/Web%20Devlopment/Website/5.jpg" class="card-img-top"/>
+							<div class="card-body">
+								<h6 class="card-title"> Biodegradble Mug <h6>
+								<p class="card-Price mb-2"> <span>&#8377;</span> 99 </p>
+								<a href="" class="btn btn-primary"> Buy Now </a>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-2 mx-lg-3 col-md-4 mx-md-5 col-sm-5 mx-sm-3 col-5 mx-2 my-5">
+						<div class="card">
+							<img src="file:///C:/Users/hp/Desktop/Web%20Devlopment/Website/5.jpg" class="card-img-top"/>
+							<div class="card-body">
+								<h6 class="card-title"> Biodegradble Mug <h6>
+								<p class="card-Price mb-2"> <span>&#8377;</span> 99 </p>
+								<a href="" class="btn btn-primary"> Buy Now </a>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-2 mx-lg-3 col-md-4 mx-md-5 col-sm-5 mx-sm-3 col-5 mx-2 my-5">
+						<div class="card">
+							<img src="file:///C:/Users/hp/Desktop/Web%20Devlopment/Website/5.jpg" class="card-img-top"/>
+							<div class="card-body">
+								<h6 class="card-title"> Biodegradble Mug <h6>
+								<p class="card-Price mb-2"> <span>&#8377;</span> 99 </p>
+								<a href="" class="btn btn-primary"> Buy Now </a>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-2 mx-lg-3 col-md-4 mx-md-5 col-sm-5 mx-sm-3 col-5 mx-2 my-5">
+						<div class="card">
+							<img src="file:///C:/Users/hp/Desktop/Web%20Devlopment/Website/5.jpg" class="card-img-top"/>
+							<div class="card-body">
+								<h6 class="card-title"> Biodegradble Mug <h6>
+								<p class="card-Price mb-2"> <span>&#8377;</span> 99 </p>
+								<a href="" class="btn btn-primary"> Buy Now </a>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-2 mx-lg-3 col-md-4 mx-md-5 col-sm-5 mx-sm-3 col-5 mx-2 my-5">
+						<div class="card">
+							<img src="file:///C:/Users/hp/Desktop/Web%20Devlopment/Website/5.jpg" class="card-img-top"/>
+							<div class="card-body">
+								<h6 class="card-title"> Biodegradble Mug <h6>
+								<p class="card-Price mb-2"> <span>&#8377;</span> 99 </p>
+								<a href="" class="btn btn-primary"> Buy Now </a>
+							</div>
+						</div>
+					</div>
+			</div>
+		</div>
+	</div>
+</body>
+ <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+    	function check() {
+    		var s = document.getElementsByName('search')[0].value;
+    		if (s == "Tooth Brush") {
+    			
+    		} else {
+    			alert("No")
+    		}
+    	}
+    </script>
+</html>
