@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+	<title> Sign Up </title>
+	<style>
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		.container-fluid{
+			border-top: 10px lightgreen solid;			
+			border-bottom: 10px lightgreen solid;
+		}
+		.col{
+			font-family: Arial;
+			font-size: 18px;
+			color: mediumseagreen;
+			margin-top: 34px;
+			text-align: center;
+			text-decoration: none;
+		}
+		.img{
+			width: 100%;
+			height: 430px;
+			background-image: url("http://localhost/efpdb/signin/img2.jpg");
+			background-size: cover;
+			margin: auto;
+			animation: slidshow 60s infinite;
+			border-radius: 20px;
+			margin-bottom: 4%;
+		}
+		@keyframes slidshow{
+			0%{ background-image: url("http://localhost/efpdb/signin/img2.jpg") }
+			20%{ background-image: url("http://localhost/efpdb/signin/img3.jpg") }
+			40%{ background-image: url("http://localhost/efpdb/signin/img4.jpg") }
+			60%{ background-image: url("http://localhost/efpdb/signin/img5.jpg") }
+			80%{ background-image: url("http://localhost/efpdb/signin/img6.jpg") }		
+			100%{ background-image: url("http://localhost/efpdb/signin/img2.jpg") }	
+		}
+		.nam{
+		width: 70%;
+		border-bottom: 1px Black solid;
+		border-top: none;
+		border-left: none;
+		border-right: none;
+		background: transparent;
+		margin-left: 15%;
+		margin-top: 20px;
+		color: whitesmoke;
+		font-size: 18px;
+		font-family: sans-serif;
+		}
+		.ema{
+		width: 70%;
+		border-bottom: 1px Black solid;
+		border-top: none;
+		border-left: none;
+		border-right: none;
+		background: transparent;
+		margin-left: 15%;
+		margin-top: 20px;
+		color: whitesmoke;
+		font-size: 18px;
+		font-family: sans-serif;
+		}
+		.pass{
+		width: 70%;
+		border-bottom: 1px Black solid;
+		border-top: none;
+		border-left: none;
+		border-right: none;
+		background: transparent;
+		margin-left: 15%;
+		margin-top: 20px;
+		color: whitesmoke;
+		font-size: 18px;
+		font-family: sans-serif;
+		}
+		.conf-pass{
+		width: 70%;
+		border-bottom: 1px Black solid;
+		border-top: none;
+		border-left: none;
+		border-right: none;
+		background: transparent;
+		margin-left: 15%;
+		margin-top: 20px;
+		color: whitesmoke;
+		font-size: 18px;
+		font-family: sans-serif;
+		}
+		.btn{
+		width: 35%;
+		height: 11%;
+		background: orange;
+		margin-left: 35%;
+		color: white;
+		font-size: 20px;
+		font-family: Corbel;
+		border-radius: 10px;
+		margin-top: 1%;
+		}
+	</style>
+</head>
+<body>
+	<div class="container-fluid">
+			<div class="row">
+				<div class="col-lg-2 col-sm-3 col-5"> <img src="http://localhost/efpdb/EFP/img1.jpg" class="img-fluid"> </div>
+				<a href="http://localhost/efpdb/EFP/EFP.html" class="col"> Home </a>
+				<a href="http://localhost/efpdb/shop/shop.html" class="col"> Shop </a>
+				<a href="http://localhost/efpdb/Books/Books.html" class="col"> Books </a>
+				<a href="http://localhost/efpdb/signin/sign.html" class="col"> Sign In </a>
+				<a href="http://localhost/efpdb/login/login.html" class="col"> Login </a>
+			</div>
+	</div>
+<div class="container-fluid">
+	<div class="container">
+		<div class="row">
+				<div class="col-lg-6">
+					<p class="col-lg-12 text-center fs-4 fw-bold fst-italic py-2" style="color: rebeccapurple;"> We Need Your Help To Change This World </p>
+					<div class="img"> </div>
+				</div>
+
+				<div class="col-lg-5 col-md-12" style="margin-top: 2%; margin-left: 5%; margin-bottom: 2%;">
+					<div class="col-xxl-12 col-xl-12 col-lg-12 col-md-11 col-sm-11 col-11" style="border-radius: 10px; height: 100%; background-image: url(http://localhost/efpdb/signin/1.png); padding-top: 2%;">
+					<form action="sign.php" method="POST" onsubmit="return validate()">
+						<h2 style="color: darkseagreen;" class="text-center mt-2"> <u> Sign Up </u> </h2>
+						<input class="nam" type="name" name="name" placeholder="Name" required="">
+						<input class="ema" type="email" name="email" placeholder="Email" required="">
+						<input class="pass" type="password" name="password" placeholder="Password" required="" id="password" onkeyup="passcheck(this.value)">	
+						<input class="conf-pass" type="password" name="confirm-password" id="Confirm password"  placeholder="Confirm Password" required="" onkeyup="check(this)">
+						<p id="alert" style="color: peachpuff; margin: 1% 0% 2% 0%; text-align: center;"> </p>
+						<button class="btn" type="submit" value="submit" name="submit"> Sign Up </button>
+							<p class="ms-5">
+								<label class="password check"> 8 Charaters </label> <br/>
+								<label class="password check"> 1 lower case Charaters </label> <br/> 		
+								<label class="password check"> 1 upper case Charaters </label> <br/>		
+								<label class="password check"> 1 numerical Charaters </label> <br/>		
+								<label class="password check"> 1 special Charaters </label> <br/>		
+							</p>
+						<h6 style="text-align: center; margin: 0% 0% 5% 0%; color: lightseagreen;" > Already have an account? <a href="http://localhost/efpdb/login/login.html" style="text-decoration: none; color: indianred;"> Login </a> </h6>
+						<h1 class="int"> </h1>
+					</form>
+					</div>
+				</div>
+		</div>
+	</div>
+</div>
+</body>
+ <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+	var password = document.getElementById('password');
+	var passclass = document.getElementsByClassName('password check');
+	var alert = document.getElementById('alert');
+	var flag = 1;
+	function check(elem) {
+		if (elem.value.length > 0) {
+			if (elem.value != password.value) {
+				alert.innerText = "Confirm Password Does not Match";
+				flag = 0;
+			}else{
+				alert.innerText = "";
+				flag = 1;
+			}
+		}else{
+				alert.innerText = "";
+				flag = 0;
+		}
+
+	}
+	function validate() {
+		if (flag==1) {
+			return true;
+		}else{
+			return false;
+		}
+	}
+
+		function passcheck(data) {
+		const lowercase = new RegExp('(?=.*[a-z])');
+		const uppercase = new RegExp('(?=.*[A-Z])');
+		const number = new RegExp('(?=.*[0-9])');
+		const specialchar = new RegExp('(?=.*[!@#\$%\^&\*])');
+		const eightchar = new RegExp('(?=.{8,})');
+
+		if (eightchar.test(data)) {
+			passclass[0].style.color = "Orange";
+			passclass[0].style.padding = "0% 0% 0% 35%";
+			flag = 1;
+		}else{
+			passclass[0].style.color = "white";
+			passclass[0].style.padding = "";
+			flag = 0;
+		}
+
+		if (lowercase.test(data)) {
+			passclass[1].style.color = "Orange";
+			passclass[1].style.padding = "0% 0% 0% 25%";
+			flag = 1;
+		}else{
+			passclass[1].style.color = "white";
+			passclass[1].style.padding = "";
+			flag = 0;
+		}
+
+		if (uppercase.test(data)) {
+			passclass[2].style.color = "Orange";
+			passclass[2].style.padding = "0% 0% 0% 25%";
+			flag = 1;
+		}else{
+			passclass[2].style.color = "white";
+			passclass[2].style.padding = "";
+			flag = 0;
+		}		
+
+		if (number.test(data)) {
+			passclass[3].style.color = "Orange";
+			passclass[3].style.padding = "0% 0% 0% 26%";
+			flag = 1;
+		}else{
+			passclass[3].style.color = "white";
+			passclass[3].style.padding = "";
+			flag = 0;
+		}		
+
+		if (specialchar.test(data)) {
+			passclass[4].style.color = "Orange";
+			passclass[4].style.padding = "0% 0% 0% 29%";
+		}else{
+			passclass[4].style.color = "white";
+			passclass[4].style.padding = "";
+			flag = 0;
+		}
+	}
+</script>
+</html>
